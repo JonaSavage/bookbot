@@ -1,7 +1,12 @@
 from stats import num_words, count_char_type, sorted_dic
+import sys
 
 def main():
-    text = (get_book_text("books/frankenstein.txt"))
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    
+    text = get_book_text(sys.argv[1])
     count_words = num_words(text)
     count_chars = count_char_type(text.lower())
     sorted_dictionary = sorted_dic(count_chars)
