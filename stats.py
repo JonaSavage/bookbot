@@ -20,7 +20,6 @@ def sort_on(dict):
 
 def sorted_dic(unsorted_dic):
     sorted_list = []
-    # sorted_dic = {"letter": "t", }
 
     for item in unsorted_dic:
         if item.isalpha():
@@ -28,8 +27,5 @@ def sorted_dic(unsorted_dic):
             sorted_list.append(temp_dic)
     
     sorted_list.sort(reverse=True, key=sort_on)
-    #print(sorted_list)
 
-    
-    #sorted_dic.sort(reverse=True, key=sort_on)
     return sorted_list
